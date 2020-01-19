@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Main.CreateRekomActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <ImageView
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:src="@drawable/ic_arrow_back_white_24dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Form rekomendasi"
+                android:layout_marginStart="35dp"
+                android:textSize="22sp"
+                android:textColor="#fff"/>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nama"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    />
+                <EditText
+                    android:id="@+id/etNamaRekom"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:textColor="#000"
+                    android:layout_marginTop="10dp"
+                    android:hint="Nama rekomendasi"
+                    android:maxLines="10"
+                    android:textSize="18sp"
+                    android:background="@android:color/transparent" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alamat"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    />
+                <EditText
+                    android:id="@+id/etAlamat"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:textColor="#000"
+                    android:layout_marginTop="10dp"
+                    android:hint="Alamat"
+                    android:maxLines="10"
+                    android:textSize="18sp"
+                    android:background="@android:color/transparent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Koordinat"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <EditText
+                        android:id="@+id/etKoordinatLat"
+                        android:inputType="numberDecimal"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="35dp"
+                        android:textColor="#000"
+                        android:layout_marginTop="10dp"
+                        android:hint="Latitude"
+                        android:maxLines="10"
+                        android:textSize="18sp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@android:color/transparent" />
+
+                    <EditText
+                        android:id="@+id/etKoordinatLng"
+                        android:inputType="numberDecimal"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="35dp"
+                        android:textColor="#000"
+                        android:layout_marginTop="10dp"
+                        android:hint="Longitude"
+                        android:maxLines="10"
+                        android:textSize="18sp"
+                        android:background="@android:color/transparent" />
+
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rating"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    />
+                <EditText
+                    android:id="@+id/etRating"
+                    android:drawableEnd="@drawable/ic_star_yellow_24dp"
+                    android:inputType="numberDecimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:textColor="#000"
+                    android:layout_marginTop="10dp"
+                    android:hint="Rating"
+                    android:maxLines="10"
+                    android:textSize="18sp"
+                    android:background="@android:color/transparent" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Type rekomendasi"
+                    android:layout_marginTop="13dp"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    />
+
+                <Spinner
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/spRole"
+                    android:layout_width="match_parent"
+                    android:typeface="normal"
+                    android:gravity="right"
+                    android:hint="Role"
+                    android:textSize="20sp"
+                    android:layout_height="wrap_content"
+                    tools:ignore="RtlHardcoded" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnAddUser"
+                android:padding="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_btn_post"
+                android:text="Add Rekomendasi"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:textColor="#fff"/>
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/loading"
+                android:layout_marginBottom="30dp"
+                android:layout_gravity="center"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
